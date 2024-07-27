@@ -5,6 +5,8 @@ from discord.commands import Option
 m_intents = discord.Intents.default()
 m_intents.message_content = True
 
+bot_token = "MTI2NjcyNzA0NjIzOTg3OTIwOA.GtdSHA.V8JTanK_xb2NL6HoSjQnb0-atXyrTtE2u1hBpk"
+
 bot = discord.Bot(
     intents=m_intents,
     debug_guilds=[1266747393513357382] 
@@ -30,4 +32,4 @@ async def cointoss(ctx):
 async def on_message_delete(msg):
     await msg.channel.send(f"Ich hab das gelesen, {msg.author}")
 
-bot.run("MTI2NjcyNzA0NjIzOTg3OTIwOA.GtdSHA.V8JTanK_xb2NL6HoSjQnb0-atXyrTtE2u1hBpk")
+bot.run(bot_token)
